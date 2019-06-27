@@ -8,8 +8,9 @@ import {Maybe} from 'ramda-fantasy';
 
 
 import LevTest from './LevTest'
-
 import LevStrStore from './LevStrStore'
+
+import BTTest from './BTTest'
 
 // Reference:
 // https://www.npmjs.com/package/fast-levenshtein
@@ -54,7 +55,7 @@ class App extends Component {
       <div>
         <Hello name={this.state.name} />
         <p>
-          Start editing to see some magic happen :)
+          <BTTest/>
         </p>
         { this.ramdaTestFunc()}
         <p/>
