@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import * as R from 'ramda';
 
+import {Button}  from 'react-bootstrap';
+
 class LevStrStore extends Component{
   constructor() {
     super();
@@ -33,13 +35,17 @@ class LevStrStore extends Component{
     return xpwd;
   }
 
+  getBSTable() {
+    return <Button variant="primary">Primary</Button>;
+  }
+
   render() {
     const xpwd2 = this.getXProdWithScore();
 
 
     const ans = this.getXProd().join(",");
     
-    return <div> { ans } </div>
+    return <div>{this.getBSTable()} { ans } </div>
     // return <div> {this.getStringArray().join(",")} </div>
     
   }
