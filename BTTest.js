@@ -25,15 +25,17 @@ class BTTest extends Component {
   //             placeholder="Enter text"
   //             onChange={this.handleChange}
   //           />
-  //           <FormControl.Feedback />
-  //           <HelpBlock>Validation is based on string length.</HelpBlock>
   //         </FormGroup>
   //     </Form>
   //    );
   // }
 
 
+  getValidationState(){
+  }
 
+  handleChange () {
+  }
 
   formSkeleton() {
 	return (
