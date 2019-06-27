@@ -1,3 +1,10 @@
 h1, p {
   font-family: Lato;
 }
+
+.BSTable {
+  border-style: solid;
+  border-width: medium;
+  border-color: green;
+  border-radius: 5px;
+}

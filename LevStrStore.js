@@ -71,6 +71,7 @@ class LevStrStore extends Component{
   getBSTable() {
     return 	<div>
               <Button variant="primary">Primary</Button>
+              <div class="BSTable">
               <Table striped bordered hover  size="sm">
                 <thead>
                 <tr>
@@ -93,6 +94,7 @@ class LevStrStore extends Component{
                 
                 </tbody>
               </Table>
+              </div>
             </div>
     ;
   }
