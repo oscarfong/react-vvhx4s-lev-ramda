@@ -11,7 +11,7 @@ class LevStrStore extends Component{
   }
 
   getStringArray() {
-    return ["apple", "orange", "banana", "mango" ];
+    return ["SMT", "EBT", "NBT", "GVT",  ];
   }
 
   //  LevStrStore/getXProd

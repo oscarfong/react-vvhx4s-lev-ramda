@@ -3,8 +3,15 @@ h1, p {
 }
 
 .BSTable {
-  border-style: solid;
-  border-width: medium;
-  border-color: green;
+  border-style: ridge;
+  border-width: 1px;
+  border-color: grey;
   border-radius: 5px;
+}
+
+.BSTable td{
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  border-radius: 1px;
 }
