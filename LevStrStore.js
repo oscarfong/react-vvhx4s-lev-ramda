@@ -10,17 +10,31 @@ class LevStrStore extends Component{
   }
 
   getStringArray() {
-    return ["apple", "orange", "banana" ];
+    return ["apple", "orange", "banana", "mango" ];
   }
 
   //  LevStrStore/getXProd
-  getXProd() {
-    const xp= R.xprod( this.getStringArray(), this.getStringArray());
+  getXProd(fnReject) {
+
+    // TODO : fnFilter
+    
+    const xp= R.xprod( this.getStringArray(),   this.getStringArray());
+    let xp2= null;
+
+    console.log ( 1000);
+    console.log ( fnReject != null);
+
+    if ( fnReject != null) {
+      xp2 = R.reject(fnReject, xp)
+    } else {
+      xp2 = xp;
+    }
+    
 
     //console.log(xp);
 
 
-    return xp;
+    return xp2;
   }
 
   getXProdWithScore() {
@@ -30,7 +44,10 @@ class LevStrStore extends Component{
 
     const fn1 =  z => [z[0], z[1], levenshtein.get(z[0], z[1] , { useCollator: true})   ]
 
-    const xpwd= R.map( fn1, this.getXProd() );
+
+    // reject duplicated cross product elements with chkDuplicateEQ()
+    const chkDuplicateEQ = elem => elem[0]==elem[1]  ;
+    const xpwd= R.map( fn1, this.getXProd( chkDuplicateEQ ) );
     console.log(xpwd);
     return xpwd;
   }
