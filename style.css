@@ -15,3 +15,8 @@ h1, p {
   border-color: lightgrey;
   border-radius: 1px;
 }
+
+
+#formBasicText {
+  background-color: lightblue;
+}
