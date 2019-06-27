@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import * as R from 'ramda';
 
-import {Button,Table}  from 'react-bootstrap';
+import {Button,Table,}  from 'react-bootstrap';
+//  InputGroup , FormControl
 
 class LevStrStore extends Component{
   constructor() {
@@ -52,6 +53,9 @@ class LevStrStore extends Component{
     return xpwd;
   }
 
+
+
+
   getBSRows() {
     const fnRow = rr =>   <tr>
                   <td>*</td>
@@ -67,7 +71,7 @@ class LevStrStore extends Component{
   getBSTable() {
     return 	<div>
               <Button variant="primary">Primary</Button>
-              <Table striped bordered hover>
+              <Table striped bordered hover  size="sm">
                 <thead>
                 <tr>
                   <th>#</th>
@@ -96,10 +100,8 @@ class LevStrStore extends Component{
   render() {
     const xpwd2 = this.getXProdWithScore();
 
-
-    const ans = this.getXProd().join(",");
-    
-    return <div>{this.getBSTable()} { ans } </div>
+    return <div>
+    {this.getBSTable()}  </div>
     // return <div> {this.getStringArray().join(",")} </div>
     
   }
