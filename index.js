@@ -12,6 +12,8 @@ import LevStrStore from './LevStrStore'
 
 import BTTest from './BTTest'
 
+// [including string likeliness cross product} 
+
 // Reference:
 // https://www.npmjs.com/package/fast-levenshtein
 
